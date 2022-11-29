@@ -66,6 +66,12 @@ try{
       const result = await productsCollection.find(query).toArray()
       res.send(result);
    })
+   // get product list by seller email
+   app.get('/products/:sellerId', async(req,res)=>{
+      const query = {sellerId: req.params.sellerId};
+      const result = await productsCollection.find(query).toArray()
+      res.send(result);
+   })
    // get userAccount
    app.get('/user/:id', async(req,res)=>{
       const query = {email: req.params.id};
