@@ -18,6 +18,8 @@ const productsCollection = client.db('saveyou-db').collection('products');
 const locationCollection = client.db('saveyou-db').collection('locations');
 const conditionCollection = client.db('saveyou-db').collection('product-conditions');
 const orderCollection = client.db('saveyou-db').collection('orders');
+const acTypeCollection = client.db('saveyou-db').collection('acTypes');
+const userCollection = client.db('saveyou-db').collection('users');
 
 async function run(){
 try{
@@ -42,6 +44,21 @@ try{
       const result = await orderCollection.insertOne(product);
       res.send(result);
    })
+   // add new user to db
+   app.post('/addUser', async (req,res)=>{
+      const user = req.body;
+     
+      const users = await userCollection.findOne({email: user.email});
+      if(users == null){
+
+          const result = await userCollection.insertOne(user);
+          res.send(result);
+      }
+      else{
+
+         res.send('User Exists, Login!');
+      }
+   })
 
    // get product list
    app.get('/products', async(req,res)=>{
@@ -49,10 +66,24 @@ try{
       const result = await productsCollection.find(query).toArray()
       res.send(result);
    })
+   // get userAccount
+   app.get('/user/:id', async(req,res)=>{
+      const query = {email: req.params.id};
+      console.log(query);
+      const result = await userCollection.findOne(query)
+      
+      res.send(result);
+   })
    // get order list
-   app.get('/orders', async(req,res)=>{
-      const query = {};
+   app.get('/orders/:id', async(req,res)=>{
+      const query = {buyerEmail: req.params.id};
       const result = await orderCollection.find(query).toArray()
+      res.send(result);
+   })
+   // get AC types 
+   app.get('/actypes', async(req,res)=>{
+      const query = {};
+      const result = await acTypeCollection.find(query).toArray()
       res.send(result);
    })
    // get product searched list
