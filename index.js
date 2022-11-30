@@ -133,7 +133,7 @@ try{
    })
    // get product searched list
    app.get('/search/:id', async(req,res)=>{
-      const data2 = ''
+     
       const query = { salePrice: req.params.id};
       const result = await productsCollection.find(query).toArray()
       console.log(query);
