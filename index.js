@@ -80,9 +80,30 @@ try{
       
       res.send(result);
    })
+   // get User list by type
+   app.get('/users/:type', async(req,res)=>{
+      
+       let query = {};
+       if(req.params.type === "Buyer" || req.params.type === "Seller"){
+          query = {acType: req.params.type}
+         } else if(req.params.type === "all"){
+            query = {}
+         } else{
+            res.status(403).send('Refused by Server')
+         }
+       
+      const result = await userCollection.find(query).toArray()
+      
+      res.send(result);
+   })
    // get order list
    app.get('/orders/:id', async(req,res)=>{
-      const query = {buyerEmail: req.params.id};
+      let query ;
+      if(req.params.id === 'all'){
+         query = {}
+      } else {
+         query = {buyerEmail: req.params.id}
+      }
       const result = await orderCollection.find(query).toArray()
       res.send(result);
    })
