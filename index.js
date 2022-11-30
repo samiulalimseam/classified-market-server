@@ -139,7 +139,7 @@ try{
       console.log(query);
       res.send(result);
    })
-// ks
+// asaaa
    // get loations
    app.get('/locations',async (req,res)=>{
       const query = {};
