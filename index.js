@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.flmxcne.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const categoriesCollection = client.db('saveyou-db').collection('categories');
@@ -38,6 +38,15 @@ try{
       const result = await productsCollection.insertOne(product);
       res.send(result);
    })
+   // Update user
+   app.post('/updateSeller/:email', async (req,res)=>{
+      const user = {email : (req.params.email)}
+      const data = req.body;
+      const result = await userCollection.updateOne(user,{ $set: data},true);
+      console.log(user,data);
+      res.send(result);
+   })
+
    // add new product to db
    app.post('/addorder', async (req,res)=>{
       const product = req.body;
@@ -64,6 +73,7 @@ try{
    app.get('/products', async(req,res)=>{
       const query = {};
       const result = await productsCollection.find(query).toArray()
+      console.log(query);
       res.send(result);
    })
    // get product list by seller email
@@ -113,6 +123,14 @@ try{
       const result = await acTypeCollection.find(query).toArray()
       res.send(result);
    })
+   // get single Order info 
+   app.get('/order/:id', async(req,res)=>{
+      const id = req.params.id;
+      const query = {_id : ObjectId(id)};
+      console.log(query);
+      const result = await orderCollection.findOne(query)
+      res.send(result);
+   })
    // get product searched list
    app.get('/search/:id', async(req,res)=>{
       const query = { salePrice: req.params.id};
@@ -139,6 +157,13 @@ try{
       const result = await productsCollection.find(query).toArray();
      res.send(result);
       
+   })
+   // get products by Ads
+   app.get('/ads', async(req,res)=>{
+      const query = {ad: true};
+      const result = await productsCollection.find(query).toArray()
+      console.log(query);
+      res.send(result);
    })
 
 
