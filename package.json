@@ -6,7 +6,9 @@
   "scripts": {
     "start-dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo \"Please run frontend and server separately in development environment.\"",
+    "start-frontend" : "cd frontend && npm start &"
   },
   "keywords": [],
   "author": "",
