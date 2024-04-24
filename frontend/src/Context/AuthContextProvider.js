@@ -17,14 +17,28 @@ export const AuthContextProvider = ({children}) => {
     document.title = newTitle;
     
     
-    const {data: accData = {}} = useQuery({
-        queryKey : ['accData', user?.email],
-        queryFn: async ()=> {
-            const res = await  fetch(`${process.env.NODE_ENV === 'production' ? "" : "http://localhost:5000"}/api/user/${user?.email}`)
-            const data = await res.json()
-            return data;
+    const { data: accData = {}, isFetching: accDataFetching, isLoading: accDataLoading } = useQuery(
+        ['accData', user?.email], // Unique query key
+        async () => {
+          try {
+            const response = await fetch(`${process.env.NODE_ENV === 'production' ? "" : "http://localhost:5000"}/api/user/${user?.email}`);
+      
+            if (!response.ok) {
+              throw new Error(`API request failed with status ${response.status}`);
+            }
+      
+            return await response.json();
+          } catch (error) {
+            console.error('Error fetching account data:', error);
+            // Optionally handle errors in your UI (e.g., display an error message)
+            return undefined; // Or a default value for data
+          }
+        },
+        {
+          enabled: !!user?.email, refetchOnWindowFocus: false
         }
-    })
+      );
+      
    
 
     
@@ -74,7 +88,7 @@ export const AuthContextProvider = ({children}) => {
      },[])
 
 
-    const authInfo = {accData,setAccount,setNewTitle,logOut,createUser,updateUser, loginWithemail, user,loading, setUser,signIn, googleLogin,setLoading} 
+    const authInfo = {accData,accDataLoading, accDataFetching,setAccount,setNewTitle,logOut,createUser,updateUser, loginWithemail, user,loading, setUser,signIn, googleLogin,setLoading} 
 
     return (
         <AuthContext.Provider value={authInfo}>

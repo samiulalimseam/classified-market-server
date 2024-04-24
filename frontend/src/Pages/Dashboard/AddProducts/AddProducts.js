@@ -101,11 +101,11 @@ const AddProducts = () => {
                                 <span className="label-text">Category</span>
                             </label>
                             {/* name input -------------------- */}
-                            <select className='select select-secondary ' {...register("categoryId")}>
-                                <option value={`Uncategorized`} disabled selected>Pick product category</option>
+                            <select defaultValue={'Uncategorized'} className='select select-secondary ' {...register("categoryId")}>
+                                <option value={`Uncategorized`} disabled >Pick product category</option>
                                 {
-                                    cats.map(cat => {
-                                        return <option value={cat._id}>{cat.title}</option>
+                                    cats.map((cat,i) => {
+                                        return <option key={i} value={cat._id}>{cat.title}</option>
                                     })
                                 }
 
@@ -118,11 +118,11 @@ const AddProducts = () => {
                                 <span className="label-text">Product Condition</span>
                             </label>
                             {/* name input -------------------- */}
-                            <select className='select select-secondary ' {...register("condition")}>
-                                <option value={`Uncategorized`} disabled selected>Pick product condition</option>
+                            <select defaultValue={`Uncategorized`} className='select select-secondary ' {...register("condition")}>
+                                <option value={`Uncategorized`} disabled >Pick product condition</option>
                                 {
-                                    conditions.map(condition => {
-                                        return <option value={condition.name}>{condition.name}</option>
+                                    conditions.map((condition,i) => {
+                                        return <option key={i} value={condition.name}>{condition.name}</option>
                                     })
                                 }
 
@@ -156,11 +156,11 @@ const AddProducts = () => {
                     <label className="label">
                         <span className="label-text">Location</span>
                     </label>
-                    <select className='select select-secondary ' {...register("location")}>
-                        <option value={`Uncategorized`} disabled selected>Pick Location</option>
+                    <select defaultValue={`Uncategorized`} className='select select-secondary ' {...register("location")}>
+                        <option value={`Uncategorized`} disabled >Pick Location</option>
                         {
-                            locations.map(location => {
-                                return <option value={location._id + '-' + location.name}>{location.name}</option>
+                            locations.map((location,i) => {
+                                return <option key={i} value={location._id + '-' + location.name}>{location.name}</option>
                             })
                         }
 

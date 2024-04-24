@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <PrivateRoutes> <CategoryPage></CategoryPage></PrivateRoutes>,
+                element:  <CategoryPage></CategoryPage>,
                 loader: ({ params }) => fetch(`${process.env.NODE_ENV === 'production' ? "" : "http://localhost:5000"}/api/category/${params.id}`)
             },
             {
