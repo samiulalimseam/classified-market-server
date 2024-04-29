@@ -1,0 +1,678 @@
+{
+    "id": 8548817764575,
+    "title": "The Complete Snowboard",
+    "handle": "the-complete-snowboard",
+    "description": "This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!",
+    "published_at": "2024-04-26T05:44:15-04:00",
+    "created_at": "2024-04-26T05:44:14-04:00",
+    "vendor": "Snowboard Vendor",
+    "type": "snowboard",
+    "tags": [
+        "Premium",
+        "Snow",
+        "Snowboard",
+        "Sport",
+        "Winter"
+    ],
+    "price": 39900,
+    "price_min": 39900,
+    "price_max": 69995,
+    "available": true,
+    "price_varies": true,
+    "compare_at_price": null,
+    "compare_at_price_min": 0,
+    "compare_at_price_max": 0,
+    "compare_at_price_varies": false,
+    "variants": [
+        {
+            "id": 45514979410143,
+            "title": "Ice / Rubber / Medium",
+            "option1": "Ice",
+            "option2": "Rubber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Ice / Rubber / Medium",
+            "public_title": "Ice / Rubber / Medium",
+            "options": [
+                "Ice",
+                "Rubber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": null,
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45514979442911,
+            "title": "Dawn / Rubber / Medium",
+            "option1": "Dawn",
+            "option2": "Rubber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Dawn / Rubber / Medium",
+            "public_title": "Dawn / Rubber / Medium",
+            "options": [
+                "Dawn",
+                "Rubber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": null,
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45514979475679,
+            "title": "Powder / Rubber / Medium",
+            "option1": "Powder",
+            "option2": "Rubber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Powder / Rubber / Medium",
+            "public_title": "Powder / Rubber / Medium",
+            "options": [
+                "Powder",
+                "Rubber",
+                "Medium"
+            ],
+            "price": 49900,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": null,
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45514979508447,
+            "title": "Electric / Rubber / Medium",
+            "option1": "Electric",
+            "option2": "Rubber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Electric / Rubber / Medium",
+            "public_title": "Electric / Rubber / Medium",
+            "options": [
+                "Electric",
+                "Rubber",
+                "Medium"
+            ],
+            "price": 39900,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": null,
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45514979541215,
+            "title": "Sunset / Rubber / Medium",
+            "option1": "Sunset",
+            "option2": "Rubber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Sunset / Rubber / Medium",
+            "public_title": "Sunset / Rubber / Medium",
+            "options": [
+                "Sunset",
+                "Rubber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": null,
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548334874847,
+            "title": "Ice / Rubber / Large",
+            "option1": "Ice",
+            "option2": "Rubber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Ice / Rubber / Large",
+            "public_title": "Ice / Rubber / Large",
+            "options": [
+                "Ice",
+                "Rubber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548334907615,
+            "title": "Ice / Fiber / Medium",
+            "option1": "Ice",
+            "option2": "Fiber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Ice / Fiber / Medium",
+            "public_title": "Ice / Fiber / Medium",
+            "options": [
+                "Ice",
+                "Fiber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548334940383,
+            "title": "Ice / Fiber / Large",
+            "option1": "Ice",
+            "option2": "Fiber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Ice / Fiber / Large",
+            "public_title": "Ice / Fiber / Large",
+            "options": [
+                "Ice",
+                "Fiber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548334973151,
+            "title": "Dawn / Rubber / Large",
+            "option1": "Dawn",
+            "option2": "Rubber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Dawn / Rubber / Large",
+            "public_title": "Dawn / Rubber / Large",
+            "options": [
+                "Dawn",
+                "Rubber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335005919,
+            "title": "Dawn / Fiber / Medium",
+            "option1": "Dawn",
+            "option2": "Fiber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Dawn / Fiber / Medium",
+            "public_title": "Dawn / Fiber / Medium",
+            "options": [
+                "Dawn",
+                "Fiber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335038687,
+            "title": "Dawn / Fiber / Large",
+            "option1": "Dawn",
+            "option2": "Fiber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Dawn / Fiber / Large",
+            "public_title": "Dawn / Fiber / Large",
+            "options": [
+                "Dawn",
+                "Fiber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335071455,
+            "title": "Powder / Rubber / Large",
+            "option1": "Powder",
+            "option2": "Rubber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Powder / Rubber / Large",
+            "public_title": "Powder / Rubber / Large",
+            "options": [
+                "Powder",
+                "Rubber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335104223,
+            "title": "Powder / Fiber / Medium",
+            "option1": "Powder",
+            "option2": "Fiber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Powder / Fiber / Medium",
+            "public_title": "Powder / Fiber / Medium",
+            "options": [
+                "Powder",
+                "Fiber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335136991,
+            "title": "Powder / Fiber / Large",
+            "option1": "Powder",
+            "option2": "Fiber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Powder / Fiber / Large",
+            "public_title": "Powder / Fiber / Large",
+            "options": [
+                "Powder",
+                "Fiber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335169759,
+            "title": "Electric / Rubber / Large",
+            "option1": "Electric",
+            "option2": "Rubber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Electric / Rubber / Large",
+            "public_title": "Electric / Rubber / Large",
+            "options": [
+                "Electric",
+                "Rubber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335202527,
+            "title": "Electric / Fiber / Medium",
+            "option1": "Electric",
+            "option2": "Fiber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Electric / Fiber / Medium",
+            "public_title": "Electric / Fiber / Medium",
+            "options": [
+                "Electric",
+                "Fiber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335235295,
+            "title": "Electric / Fiber / Large",
+            "option1": "Electric",
+            "option2": "Fiber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Electric / Fiber / Large",
+            "public_title": "Electric / Fiber / Large",
+            "options": [
+                "Electric",
+                "Fiber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335268063,
+            "title": "Sunset / Rubber / Large",
+            "option1": "Sunset",
+            "option2": "Rubber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Sunset / Rubber / Large",
+            "public_title": "Sunset / Rubber / Large",
+            "options": [
+                "Sunset",
+                "Rubber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335300831,
+            "title": "Sunset / Fiber / Medium",
+            "option1": "Sunset",
+            "option2": "Fiber",
+            "option3": "Medium",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Sunset / Fiber / Medium",
+            "public_title": "Sunset / Fiber / Medium",
+            "options": [
+                "Sunset",
+                "Fiber",
+                "Medium"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        },
+        {
+            "id": 45548335333599,
+            "title": "Sunset / Fiber / Large",
+            "option1": "Sunset",
+            "option2": "Fiber",
+            "option3": "Large",
+            "sku": "",
+            "requires_shipping": true,
+            "taxable": true,
+            "featured_image": null,
+            "available": true,
+            "name": "The Complete Snowboard - Sunset / Fiber / Large",
+            "public_title": "Sunset / Fiber / Large",
+            "options": [
+                "Sunset",
+                "Fiber",
+                "Large"
+            ],
+            "price": 69995,
+            "weight": 4536,
+            "compare_at_price": null,
+            "inventory_management": "shopify",
+            "barcode": "",
+            "requires_selling_plan": false,
+            "selling_plan_allocations": [],
+            "quantity_rule": {
+                "min": 1,
+                "max": null,
+                "increment": 1
+            }
+        }
+    ],
+    "images": [
+        "//dyn-sa.myshopify.com/cdn/shop/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1714124654"
+    ],
+    "featured_image": "//dyn-sa.myshopify.com/cdn/shop/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1714124654",
+    "options": [
+        "Color",
+        "Material",
+        "Size"
+    ],
+    "media": [
+        {
+            "alt": "Top and bottom view of a snowboard. The top view shows abstract circles and lines in shades of teal.\n          The bottom view shows abstract circles and lines in shades of purple and blue with the text “SHOPIFY” in a\n          sans serif typeface on top.",
+            "id": 34971968733407,
+            "position": 1,
+            "preview_image": {
+                "aspect_ratio": 1,
+                "height": 1600,
+                "width": 1600,
+                "src": "//dyn-sa.myshopify.com/cdn/shop/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1714124654"
+            },
+            "aspect_ratio": 1,
+            "height": 1600,
+            "media_type": "image",
+            "src": "//dyn-sa.myshopify.com/cdn/shop/files/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1714124654",
+            "width": 1600
+        }
+    ],
+    "requires_selling_plan": false,
+    "selling_plan_groups": [],
+    "content": "This <b>PREMIUM</b> <i>snowboard</i> is so <b>SUPER</b><i>DUPER</i> awesome!"
+}

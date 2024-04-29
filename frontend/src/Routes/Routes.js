@@ -20,6 +20,8 @@ import AdminRoutes from './AdminRoutes';
 import BuyerRoute from './BuyerRoute';
 import PrivateRoutes from './PrivateRoutes';
 import SellerRoute from './SellerRoute';
+import ErrorImgSVG from '../assets/icons/errorImage';
+import Test from '../Pages/Test/Test';
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +44,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path: '/test',
+                element: <Test></Test>
             },
             {
                 path: '/category/:id',
@@ -100,7 +106,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '*',
-                element: <div className='h-[80vh] flex flex-col items-center justify-center'><p className="text-4xl font-light">404 Not Found</p> <Link className='btn btn-ghost text-accent'>Go Back</Link></div>
+                element: <div className='h-[80vh] flex flex-col items-center justify-center'><p className="text-4xl font-light">404 Not Found</p>
+                <ErrorImgSVG  />
+                 <Link className='btn btn-ghost text-accent'>Go Back</Link></div>
             }
         ]
     }
