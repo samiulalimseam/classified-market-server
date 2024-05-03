@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContextProvider';
 import logo from './logo.svg'
 import './style.css';
+import Swal from 'sweetalert2'
 
 const Navbar2 = ({ children }) => {
     const navigate = useNavigate();
@@ -11,12 +12,12 @@ const Navbar2 = ({ children }) => {
         logOut()
     }
     const menuitems = <>
-        <li> <Link to={`/`} >Home</Link> </li>
-        {!user?.uid && <li><Link to={'/login'}>Login</Link></li>}
-        {user?.uid && <li><Link to={`/`} onClick={handleSignout}>SignOut</Link></li>}
-        <li> <Link to={`/dashboard`} >Dashboard</Link> </li>
-        <li> <Link to={`/blogs`} >Blog</Link> </li>
-        <Link to={`/`} className="btn w-36 md:btn-md btn-sm btn-primary">Post Your Ad</Link>
+        <li> <NavLink to={`/`} >Home</NavLink> </li>
+        {!user?.uid && <li><NavLink to={'/login'}>Login</NavLink></li>}
+        {user?.uid && <li><NavLink to={`/login`} onClick={handleSignout}>SignOut</NavLink></li>}
+        <li> <NavLink to={`/dashboard`} >Dashboard</NavLink> </li>
+        <li> <NavLink to={`/blogs`} >Blog</NavLink> </li>
+        <NavLink to={`/`} className="btn w-36 md:btn-md btn-sm btn-primary">Post Your Ad</NavLink>
 
     </>
     return (

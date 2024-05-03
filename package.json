@@ -8,7 +8,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "echo \"Please run frontend and server separately in development environment.\"",
-    "start-frontend" : "cd frontend && npm start &"
+    "start-frontend": "cd frontend && npm start &"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.12.1"
+    "mongodb": "^4.12.1",
+    "mongose": "^0.0.2-security"
   }
 }

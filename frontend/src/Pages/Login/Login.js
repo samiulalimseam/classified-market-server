@@ -1,35 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../Context/AuthContextProvider';
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const { setNewTitle, setAccount, signIn, googleLogin, user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const location = useLocation();
     const navigate = useNavigate();
+    // const [loading, setLoading] = useState(false)
 
     // toast
-    const successToast = () => {
-        toast.success('Login Successful!', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            // transition: Bounce,
-        });
-    }
+    // const successToast = () => {
+    //     toast.success('Login Successful!', {
+    //         position: "top-center",
+    //         autoClose: 5000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //         theme: "light",
+    //         // transition: Bounce,
+    //     });
+    // }
     setNewTitle('Login- SaveYou')
     const from = location.state?.from?.pathname || '/';
 
     const inserUserToDb = (user) => {
+        // setLoading(true)
         fetch(`${process.env.NODE_ENV === 'production' ? "" : "http://localhost:5000"}/api/addUser`, {
             method: "POST",
             headers: {
@@ -40,15 +43,19 @@ const Login = () => {
             console.log(res)
             console.log('Success')
             setAccount(user)
-            successToast();
+            // successToast();
         }).catch(err => console.log(err))
+            // .finally(() => {
+            //     setLoading(false)
+            // })
 
     }
 
     const handleLogin = data => {
+        // setLoading(true)
         signIn(data.email, data.password)
             .then(() => {
-                successToast();
+                // successToast();
                 // setTimeout(() => {
                 //     navigate(from, { replace: true })
                 // }, 500)
@@ -56,12 +63,16 @@ const Login = () => {
             .catch(err => {
                 console.log(err)
             })
+            // .finally(() => {
+            //     setLoading(false)
+            // })
     }
 
     const handleGoogleLogin = () => {
+        // setLoading(true)
         googleLogin()
             .then(result => {
-                successToast();
+                // successToast();
                 console.log(result.user);
                 const userToInsert = {
                     name: result.user?.displayName,
@@ -81,10 +92,26 @@ const Login = () => {
             .catch(err => {
                 console.log(err)
             })
+            // .finally(() => {
+            //     setTimeout(setLoading(false), 10000)
+
+            // })
     }
 
     if (user?.email) {
-        return <Navigate to={'/dashboard'} />
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Login Successful",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return <>
+            {/* {loading && <span className="loading loading-spinner text-success"></span>} */}
+
+            <Navigate to={'/dashboard'} />
+        </>
+
     }
     else {
         return (
@@ -123,13 +150,14 @@ const Login = () => {
                                 </div>
                             </form>
                             <button onClick={handleGoogleLogin} className="btn  btn-secondary  btn-circle m-auto mb-3"><span className='text-xl'><FcGoogle></FcGoogle></span></button>
-                            <button onClick={successToast}>Toast</button>
+                            {/* <button onClick={successToast}>Toast</button> */}
+                            {/* {loading && <span className="loading loading-infinity loading-lg"></span>} */}
                             <p className="text-sm my-1 font-light text-center mb-3">Dont have an account? <Link className='text-accent font-bold' to={`/signup`}>SignUp Now</Link></p>
                         </div>
                     </div>
                 </div>
                 {/* Toast notification */}
-                <ToastContainer
+                {/* <ToastContainer
                     position="top-center"
                     autoClose={5000}
                     hideProgressBar={false}
@@ -140,7 +168,7 @@ const Login = () => {
                     draggable
                     pauseOnHover
                     theme="light"
-                />
+                /> */}
             </div>
         );
     }
