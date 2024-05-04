@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const path = require("path");
 const app = express();
 const cors = require("cors");
@@ -15,13 +16,11 @@ app.use(express.json());
 
 const { initRootRouter } = require("./src/routers/rootRouter");
 
-async function run() {
-  try {
-    initRootRouter(app);
-  } finally {
-  }
+try {
+  initRootRouter(app);
+} catch (err) {
+  console.log(err.message);
 }
-run().catch((error) => console.log(error));
 
 app.get("/api", async (req, res) => {
   res.send("Server Running");
@@ -35,4 +34,3 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log("Server running on port", port);
 });
-
