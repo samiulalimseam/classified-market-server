@@ -3,7 +3,6 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../Context/AuthContextProvider';
 import { FcGoogle } from "react-icons/fc";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
 
@@ -12,27 +11,12 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const location = useLocation();
     const navigate = useNavigate();
-    // const [loading, setLoading] = useState(false)
+    
 
-    // toast
-    // const successToast = () => {
-    //     toast.success('Login Successful!', {
-    //         position: "top-center",
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "light",
-    //         // transition: Bounce,
-    //     });
-    // }
     setNewTitle('Login- SaveYou')
     const from = location.state?.from?.pathname || '/';
 
     const inserUserToDb = (user) => {
-        // setLoading(true)
         fetch(`${process.env.NODE_ENV === 'production' ? "" : "http://localhost:5000"}/api/addUser`, {
             method: "POST",
             headers: {
@@ -43,19 +27,13 @@ const Login = () => {
             console.log(res)
             console.log('Success')
             setAccount(user)
-            // successToast();
         }).catch(err => console.log(err))
-            // .finally(() => {
-            //     setLoading(false)
-            // })
 
     }
 
     const handleLogin = data => {
-        // setLoading(true)
         signIn(data.email, data.password)
             .then(() => {
-                // successToast();
                 // setTimeout(() => {
                 //     navigate(from, { replace: true })
                 // }, 500)
@@ -63,16 +41,12 @@ const Login = () => {
             .catch(err => {
                 console.log(err)
             })
-            // .finally(() => {
-            //     setLoading(false)
-            // })
     }
 
     const handleGoogleLogin = () => {
         // setLoading(true)
         googleLogin()
             .then(result => {
-                // successToast();
                 console.log(result.user);
                 const userToInsert = {
                     name: result.user?.displayName,
@@ -92,15 +66,11 @@ const Login = () => {
             .catch(err => {
                 console.log(err)
             })
-            // .finally(() => {
-            //     setTimeout(setLoading(false), 10000)
-
-            // })
     }
 
     if (user?.email) {
         Swal.fire({
-            position: "top-end",
+            position: "top-center",
             icon: "success",
             title: "Login Successful",
             showConfirmButton: false,

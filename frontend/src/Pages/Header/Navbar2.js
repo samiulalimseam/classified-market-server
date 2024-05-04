@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContextProvider';
 import logo from './logo.svg'
@@ -8,16 +8,32 @@ import Swal from 'sweetalert2'
 const Navbar2 = ({ children }) => {
     const navigate = useNavigate();
     const { user, logOut } = useContext(AuthContext);
-    const handleSignout = () => {
-        logOut()
+    const [logoutSuccess, setLogoutSuccess] = useState(false);
+
+    useEffect(() => {
+        if (logoutSuccess) {
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Logout Successful",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+    }, [logoutSuccess]);
+
+    const handleSignout = async () => {
+        await logOut();
+        setLogoutSuccess(true);
     }
+
     const menuitems = <>
         <li> <NavLink to={`/`} >Home</NavLink> </li>
         {!user?.uid && <li><NavLink to={'/login'}>Login</NavLink></li>}
         {user?.uid && <li><NavLink to={`/login`} onClick={handleSignout}>SignOut</NavLink></li>}
         <li> <NavLink to={`/dashboard`} >Dashboard</NavLink> </li>
         <li> <NavLink to={`/blogs`} >Blog</NavLink> </li>
-        <NavLink to={`/`} className="btn w-36 md:btn-md btn-sm btn-primary">Post Your Ad</NavLink>
+        {user?.uid && <li><NavLink to={`/createAd`} className="btn w-36 md:btn-md btn-sm btn-primary">Post Your Ad</NavLink></li>}
 
     </>
     return (

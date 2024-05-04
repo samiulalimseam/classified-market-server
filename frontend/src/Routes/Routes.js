@@ -22,6 +22,8 @@ import PrivateRoutes from './PrivateRoutes';
 import SellerRoute from './SellerRoute';
 import ErrorImgSVG from '../assets/icons/errorImage';
 import Test from '../Pages/Test/Test';
+import CreateAd from '../Pages/CreateAd/CreateAd';
+
 
 export const router = createBrowserRouter([
     {
@@ -98,11 +100,16 @@ export const router = createBrowserRouter([
                         path: '/dashboard/addproduct',
                         element: <SellerRoute> <AddProducts></AddProducts></SellerRoute>
                     },
+                    
                 ]
             },
             {
                 path: '/signUp',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/createAd',
+                element: <CreateAd></CreateAd>
             },
             {
                 path: '*',
