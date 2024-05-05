@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Context/AuthContextProvider";
+import { AuthContext } from "../../../Context/AuthContextProvider";
 import ProductCard from "../ProductCard/ProductCard";
 
 const BookingModal = ({ product }) => {

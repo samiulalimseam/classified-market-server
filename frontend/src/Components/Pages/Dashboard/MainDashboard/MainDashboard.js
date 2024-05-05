@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthContextProvider';
+import { AuthContext } from '../../../../Context/AuthContextProvider';
 
 const MainDashboard = () => {
     const { user ,accData} = useContext(AuthContext);

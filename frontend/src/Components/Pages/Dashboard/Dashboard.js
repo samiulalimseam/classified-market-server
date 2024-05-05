@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { AuthContext } from "../../Context/AuthContextProvider";
+import { AuthContext } from "../../../Context/AuthContextProvider";
 
 const Dashboard = () => {
   const { accData, accDataFetching } = useContext(AuthContext);

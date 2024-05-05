@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './SignUp.css';
-import  { AuthContext } from '../../Context/AuthContextProvider';
+import  { AuthContext } from '../../../Context/AuthContextProvider';
 
 
 const SignUp = () => {

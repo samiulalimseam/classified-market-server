@@ -4,8 +4,8 @@ import './ads.css';
 
 import ProductCard from '../ProductCard/ProductCard';
 import BookingModal from '../BookingModal/BookingModal';
-import { AuthContext } from '../../Context/AuthContextProvider';
-import LoadingSpinner from '../../Routes/LoadingSpinner';
+import { AuthContext } from '../../../Context/AuthContextProvider';
+import LoadingSpinner from '../../../Routes/LoadingSpinner';
 
 const LatestAds = ({products}) => {
   const {user,accData}= useContext(AuthContext);

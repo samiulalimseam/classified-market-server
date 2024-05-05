@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
 import { Carousel } from 'react-responsive-carousel';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthContextProvider';
+import { AuthContext } from '../../../Context/AuthContextProvider';
 import BookingModal from '../BookingModal/BookingModal';
 import About from './About';
 import Categories from './Categories';

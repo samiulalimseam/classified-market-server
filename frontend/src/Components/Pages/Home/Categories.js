@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useState } from 'react';
 import {GiRunningShoe} from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthContextProvider';
+import { AuthContext } from '../../../Context/AuthContextProvider';
 
 const Categories = () => {
     const {setLoading} = useContext(AuthContext)

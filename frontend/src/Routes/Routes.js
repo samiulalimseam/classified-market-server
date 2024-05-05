@@ -1,28 +1,29 @@
 import React from 'react';
 import { createBrowserRouter, Link } from 'react-router-dom';
-import Blogs from '../Pages/Blogs/Blogs';
-import CategoryPage from '../Pages/CategoryPage/CategoryPage';
-import AddProducts from '../Pages/Dashboard/AddProducts/AddProducts';
-import Dashboard from '../Pages/Dashboard/Dashboard';
-import BuyersTable from '../Pages/Dashboard/MainDashboard/BuyersTable/BuyersTable';
-import MainDashboard from '../Pages/Dashboard/MainDashboard/MainDashboard';
-import OrderTable from '../Pages/Dashboard/MainDashboard/OrderTable/OrderTable';
-import ProductTable from '../Pages/Dashboard/MainDashboard/ProductTable/ProductTable';
-import SellersTable from '../Pages/Dashboard/MainDashboard/SellersTable/SellersTable';
-import Profile from '../Pages/Dashboard/Profile';
-import Home from '../Pages/Home/Home';
-import Login from '../Pages/Login/Login';
-import Main from '../Pages/Main';
-import Payment from '../Pages/Payment/Payment';
-import SearchPage from '../Pages/SearchPage/SearchPage';
-import SignUp from '../Pages/SignUp/SignUp';
+import Blogs from '../Components/Pages/Blogs/Blogs';
+import CategoryPage from '../Components/Pages/CategoryPage/CategoryPage';
+import AddProducts from '../Components/Pages/Dashboard/AddProducts/AddProducts';
+import Dashboard from '../Components/Pages/Dashboard/Dashboard';
+import BuyersTable from '../Components/Pages/Dashboard/MainDashboard/BuyersTable/BuyersTable';
+import MainDashboard from '../Components/Pages/Dashboard/MainDashboard/MainDashboard';
+import OrderTable from '../Components/Pages/Dashboard/MainDashboard/OrderTable/OrderTable';
+import ProductTable from '../Components/Pages/Dashboard/MainDashboard/ProductTable/ProductTable';
+import SellersTable from '../Components/Pages/Dashboard/MainDashboard/SellersTable/SellersTable';
+import Profile from '../Components/Pages/Dashboard/Profile';
+import Home from '../Components/Pages/Home/Home';
+import Login from '../Components/Pages/Login/Login';
+
+import Payment from '../Components/Pages/Payment/Payment';
+import SearchPage from '../Components/Pages/SearchPage/SearchPage';
+import SignUp from '../Components/Pages/SignUp/SignUp';
 import AdminRoutes from './AdminRoutes';
 import BuyerRoute from './BuyerRoute';
 import PrivateRoutes from './PrivateRoutes';
 import SellerRoute from './SellerRoute';
 import ErrorImgSVG from '../assets/icons/errorImage';
-import Test from '../Pages/Test/Test';
-import CreateAd from '../Pages/CreateAd/CreateAd';
+import Test from '../Components/Pages/Test/Test';
+import CreateAd from '../Components/Pages/CreateAd/CreateAd';
+import Main from '../Components/Pages/Main';
 
 
 export const router = createBrowserRouter([

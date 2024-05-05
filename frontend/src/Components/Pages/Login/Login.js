@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import { AuthContext } from '../../Context/AuthContextProvider';
+import { AuthContext } from '../../../Context/AuthContextProvider';
 import { FcGoogle } from "react-icons/fc";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'

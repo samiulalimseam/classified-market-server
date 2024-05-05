@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../Context/AuthContextProvider';
+import { AuthContext } from '../../../../Context/AuthContextProvider';
 
 const AddProducts = () => {
     const { user,accData } = useContext(AuthContext);

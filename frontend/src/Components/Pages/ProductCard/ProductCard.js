@@ -4,8 +4,8 @@ import { FaUserAlt } from 'react-icons/fa'
 import { BsFillHandIndexThumbFill, BsFillSuitHeartFill, BsFillTagFill, BsPinMapFill } from 'react-icons/bs'
 import { format } from 'date-fns';
 import BookingModal from '../BookingModal/BookingModal';
-import { AuthContext } from '../../Context/AuthContextProvider';
-import LoadingSpinner from '../../Routes/LoadingSpinner';
+import { AuthContext } from '../../../Context/AuthContextProvider';
+import LoadingSpinner from '../../../Routes/LoadingSpinner';
 
 const ProductCard = ({ product, setProduct, setCardProduct }) => {
   const { loading } = useContext(AuthContext);

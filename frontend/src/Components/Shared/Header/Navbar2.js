@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthContextProvider';
+import { AuthContext } from '../../../Context/AuthContextProvider';
 import logo from './logo.svg'
 import './style.css';
 import Swal from 'sweetalert2'
