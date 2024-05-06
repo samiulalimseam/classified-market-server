@@ -22,6 +22,9 @@ const orderSchema = new Schema({
 
 const accountTypeSchema = new Schema({
   // Define schema fields
+  title : {
+    type : String
+  }
 });
 
 const locationSchema = new Schema({

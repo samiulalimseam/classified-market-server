@@ -122,7 +122,8 @@ const getOrderList = async (req, res) => {
 
 const getAccountTypes = async (req, res) => {
   try {
-    const accountTypes = await AccountType.find();
+    console.log(' actype api hit ');
+    const accountTypes = await AccountType.find({});
     res.send(accountTypes);
   } catch (error) {
     res.status(500).send(error.message);
