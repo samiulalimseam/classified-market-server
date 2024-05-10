@@ -1,6 +1,10 @@
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const mongoose = require("mongoose");
 const { getCategoryList, addProduct, updateUser, addOrder, addUser, getProductList, getProductListBySeller, getUserAccount, getUserListByType, getOrderList, getAccountTypes, getOrderInfo, getProductSearchedList, getLocations, getConditions, getProductsByCategory, getProductsByAds } = require("../controller/controller");
+const { RootQueryType } = require("../graphql/queries");
+const typeDefs = require("../graphql/types");
+const resolvers = require("../graphql/queries");
+const { ApolloServer } = require("apollo-server-express");
 
 const uri = `${process.env.DB_URI}`;
 mongoose
@@ -25,8 +29,19 @@ const orderCollection = client.db("saveyou-db").collection("orders");
 const acTypeCollection = client.db("saveyou-db").collection("acTypes");
 const userCollection = client.db("saveyou-db").collection("users");
 
+
+
 const initRootRouter = (app) => {
   // Routes
+// Create an instance of Apollo Server
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+// Apply Apollo middleware to the Express app
+server.applyMiddleware({ app, path: '/graphql' });
+
   app.get("/api/categories", getCategoryList);
   app.post("/api/addproduct", addProduct);
   app.post("/api/updateSeller/:email", updateUser);
